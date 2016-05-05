@@ -3,6 +3,9 @@ MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 RUN apk --update add \
     php-sqlite3 \
+    php-dom \
+    php-pdo \
+    php-pdo_sqlite \
     php-gd && \
     rm -rf /var/cache/apk/*
 

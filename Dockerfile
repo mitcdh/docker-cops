@@ -2,7 +2,7 @@ FROM mitcdh/composer-base
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 RUN apk --update add \
-    php-sqlite \
+    php-sqlite3 \
     php-gd && \
     rm -rf /var/cache/apk/*
 

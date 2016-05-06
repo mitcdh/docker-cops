@@ -2,6 +2,7 @@ FROM mitcdh/hiawatha-php
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 RUN apk --update add \
+	git \
     php-pdo \
     php-pdo_sqlite \
     php-gd && \

@@ -3,9 +3,9 @@ MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 RUN apk --update add \
 	git \
-    php-pdo \
-    php-pdo_sqlite \
-    php-gd && \
+    php5-pdo \
+    php5-pdo_sqlite \
+    php5-gd && \
     rm -rf /var/cache/apk/*
 
 RUN git clone -b master https://github.com/seblucas/cops.git /www

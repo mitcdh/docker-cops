@@ -13,7 +13,7 @@ RUN addgroup -S www-data && \
 
 RUN git clone -b master https://github.com/seblucas/cops.git /www
 
-COPY files/* /www/config_local.php
+COPY files/* /www/
 
 RUN if -n $BASICAUTH; then echo $BASICAUTH >> /www/Caddyfile; fi
 

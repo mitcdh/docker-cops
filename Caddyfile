@@ -5,4 +5,7 @@ fastcgi / 127.0.0.1:9000 php
 log stdout
 errors stderr
 prometheus
-realip
+realip {
+    from 10.42.0.0/16
+    from 172.17.0.0/16
+}

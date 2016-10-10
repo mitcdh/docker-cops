@@ -4,8 +4,11 @@ gzip
 fastcgi / 127.0.0.1:9000 php
 log stdout
 errors stderr
-prometheus
-realip {
-    from 10.42.0.0/16
-    from 172.17.0.0/16
+git
+{
+	repo https://github.com/seblucas/cops.git
+	path /www/public
+	interval 86400
+	then cp /www/config_local.php /www/public/config_local.php
 }
+root /www/public

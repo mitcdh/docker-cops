@@ -1,6 +1,10 @@
 # Dockerised COPS
 
-Docker image for [COPS (Calibre OPDS server)](https://github.com/seblucas/cops).
+Docker image for [COPS (Calibre OPDS server)](https://github.com/seblucas/cops). Based on Caddy with the following features:
+
+* COPS repository https://github.com/seblucas/cops.git is cloned once a day using the Caddy git module.
+* Prometheus and realip modules are also avaliable.
+* Additional configuration can be added to the Caddyfile through stdin when running the container.
 
 ### Environment Variables
 

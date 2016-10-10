@@ -15,7 +15,7 @@ RUN git clone -b master https://github.com/seblucas/cops.git /www
 
 COPY files/* /www/
 
-RUN if -n "$BASICAUTH"; then echo "$BASICAUTH" >> /www/Caddyfile; fi
+RUN bash -c 'if -n "$BASICAUTH"; then echo "$BASICAUTH" >> /www/Caddyfile; fi'
 
 VOLUME /books
 WORKDIR /www

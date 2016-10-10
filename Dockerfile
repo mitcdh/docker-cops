@@ -1,13 +1,15 @@
 FROM mitcdh/caddy-php
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
-USER root
-
 RUN apk --update add \
     php5-pdo \
     php5-pdo_sqlite \
     php5-gd && \
     rm -rf /var/cache/apk/*
+
+# add user and group
+RUN addgroup -S www-data && \
+ adduser -S -G www-data -g "Web Server" -h "/www" web-srv
 
 USER web-srv
 

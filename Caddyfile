@@ -2,5 +2,7 @@
 startup php-fpm
 gzip
 fastcgi / 127.0.0.1:9000 php
+log stdout
+errors stdout
 prometheus
 realip

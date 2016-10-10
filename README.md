@@ -1,6 +1,6 @@
 # Dockerised COPS
 
-Docker image for [COPS (Calibre OPDS server)](https://github.com/seblucas/cops)
+Docker image for [COPS (Calibre OPDS server)](https://github.com/seblucas/cops) runs as a `web-srv` user.
 
 ### Environment Variables
 

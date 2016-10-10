@@ -19,7 +19,7 @@ docker run -d \
 * `/books`: Mount point for the calibre library
 
 ### Exposed Ports
-* `80`: http web server
+* `2015`: http web server
 
 ### Credits
 * COPS by Sébastien Lucas (https://github.com/seblucas/cops)

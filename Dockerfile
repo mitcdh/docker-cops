@@ -13,8 +13,9 @@ RUN addgroup -S www-data && \
 
 RUN git clone -b master https://github.com/seblucas/cops.git /www
 
-COPY config_local.php /www/config_local.php
-COPY Caddyfile /www/Caddyfile
+COPY files/* /www/config_local.php
+
+RUN if -n $BASICAUTH; then echo $BASICAUTH >> /www/Caddyfile; fi
 
 VOLUME /books
 WORKDIR /www

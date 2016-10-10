@@ -1,8 +1,7 @@
-FROM mitcdh/hiawatha-php
+FROM mitcdh/caddy-php
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 RUN apk --update add \
-	git \
     php5-pdo \
     php5-pdo_sqlite \
     php5-gd && \
@@ -11,11 +10,13 @@ RUN apk --update add \
 RUN git clone -b master https://github.com/seblucas/cops.git /www
 
 COPY config_local.php /www/config_local.php
+COPY Caddyfile /www/Caddyfile
 
-RUN mkdir /books
 VOLUME /books
+WORKDIR /www
 
-EXPOSE 80
+EXPOSE 2015
 
-CMD ["/scripts/run.sh"]
+USER web-srv
+CMD ["/usr/bin/caddy"]
 

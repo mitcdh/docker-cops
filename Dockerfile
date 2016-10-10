@@ -11,8 +11,6 @@ RUN apk --update add \
 RUN addgroup -S www-data && \
  adduser -S -G www-data -g "Web Server" -h "/www" web-srv
 
-USER web-srv
-
 RUN git clone -b master https://github.com/seblucas/cops.git /www
 
 COPY config_local.php /www/config_local.php
@@ -22,5 +20,6 @@ VOLUME /books
 WORKDIR /www
 
 EXPOSE 2015
+USER web-srv
 CMD ["/usr/bin/caddy"]
 

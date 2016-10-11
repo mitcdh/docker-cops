@@ -6,7 +6,7 @@ log stdout
 errors stderr
 git {
 	repo https://github.com/seblucas/cops.git
-	path /www/public
+	clonepath /www/public
 	interval 86400
 	then cp /www/config_local.php /www/public/config_local.php
 }

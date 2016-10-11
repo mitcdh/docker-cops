@@ -4,8 +4,7 @@ gzip
 fastcgi / 127.0.0.1:9000 php
 log stdout
 errors stderr
-git
-{
+git {
 	repo https://github.com/seblucas/cops.git
 	path /www/public
 	interval 86400

@@ -7,7 +7,8 @@ RUN apk --update add \
     php5-gd && \
     rm -rf /var/cache/apk/*
 
-COPY files/* /www/
+COPY files/Caddyfile /scripts/
+COPY files/config_local.php /www/
 
 VOLUME /books
 

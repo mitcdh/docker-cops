@@ -1,4 +1,4 @@
-FROM mitcdh/caddy-php:php7
+FROM mitcdh/caddy-composer
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 COPY files/Caddyfile /caddy-bootstrap/

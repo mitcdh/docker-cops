@@ -12,9 +12,7 @@
     /*
      * Catalog's title
      */
-    $cops_title = getenv('COPS_TITLE');
-    $cops_title = $cops_title ? $cops_title : 'COPS';
-    $config['cops_title_default'] = $cops_title;
+    $config['cops_title_default'] = 'COPS';
 
     /*
      * use URL rewriting for downloading of ebook in HTML catalog

@@ -1,7 +1,7 @@
-FROM mitcdh/caddy-php
+FROM mitcdh/caddy-composer
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
-COPY files/Caddyfile /scripts/
+COPY files/Caddyfile /caddy-bootstrap/
 COPY files/config_local.php /www/
 
 VOLUME /books
